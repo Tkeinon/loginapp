@@ -1,7 +1,7 @@
 {% extends 'accounts/base.html' %}
 {% block content %}
-        <h1>Hi {{request.user.username }} </h1> <br>
-        <p>You work at {{ request.user.users.organization.organization_name }}</p>
+        <h1>Hi {{request.user.first_name}} {{ request.user.last_name }} </h1> <br>
+        <p>You work at {{ request.user.users.organization }}</p>
         <a href="{% url 'logout' %}">Log out</a>
 
 {% endblock content %}
